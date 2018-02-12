@@ -32,7 +32,7 @@ const data = {
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App from-home">
         <Board data={data} draggable />
       </div>
     );
