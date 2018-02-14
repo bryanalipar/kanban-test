@@ -1,0 +1,21 @@
+/*Modal.css*/
+
+.backdrop {
+	background: rgba(0,0,0,0.3);
+	bottom: 0;
+	display: flex;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.instruction_modal {
+	background: #fff;
+	border-radius: 5px;
+	max-width: 90%;
+	min-height: 300px;
+	padding: 30px;
+}

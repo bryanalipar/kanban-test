@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import Board from 'react-trello'
-import logo from './logo.svg';
+import Board from 'react-trello';
+// import logo from './logo.svg';
+import Modal from './components/Modal';
+
 import './App.css';
 
 const data = {
@@ -15,24 +17,46 @@ const data = {
     },
     {
       id: 'lane2',
-      title: 'In Progress'
+      title: 'In Progress',
+      label: '2/2',
+      cards: []
     },
     {
       id: 'lane3',
-      title: 'Done'
+      title: 'Done',
+      label: '2/2',
+      cards: []
     }
   ]
 }
 
+
+const modalFlag = sessionStorage.getItem('modalOpen')==null ? true : false;
+
 class App extends Component {
+
+    constructor(props) {
+      super(props);
+      this.state = { firstPageLoad: modalFlag }; 
+    }
+
+    toggleModal = () => {
+      this.setState({ firstPageLoad: false });
+      sessionStorage.setItem('modalOpen', false);
+    }
+
   render() {
+
     return (
-      <div className="App from-home">
+      <div className="App container">
         <Board 
           data={data} 
           draggable
           editable
-
+         />
+         <Modal
+          show={this.state.firstPageLoad}
+          onClose={this.toggleModal}
          />
       </div>
     );
