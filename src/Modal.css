@@ -10,12 +10,32 @@
 	top: 0;
     align-items: center;
     justify-content: space-around;
+    padding: 5rem;
 }
 
 .instruction_modal {
 	background: #fff;
 	border-radius: 5px;
-	max-width: 90%;
+	max-width: 960px;
 	min-height: 300px;
 	padding: 30px;
+}
+
+.instruction {
+	margin: 4rem 0;
+}
+
+.instruction .ins_heading {
+	margin-bottom: 1rem;
+}
+
+.instruction .ins_numbr {
+	background: #23719f;
+	display: inline-block;
+	text-align: center;
+	border-radius: 100%;
+	/*padding: .5rem;*/
+	color: white;
+	width: 2rem;
+	height: 2rem;
 }

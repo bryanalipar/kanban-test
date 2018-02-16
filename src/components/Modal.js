@@ -16,12 +16,12 @@ class Modal extends Component {
 		return (
 			<div className="backdrop">
 				<div className="instruction_modal">
-					<h2>Getting Started With Trello</h2>
+					<h2 className="text-center">Getting Started With Trello</h2>
 					
-					<div className="row">
+					<div className="row instruction">
 						<div className="col-sm-4">
 							<h3 className="ins_heading"><span className="ins_numbr">1</span> Add Cards</h3>
-							<p>Add cards for each task that needs to be completed by clicking “Add A Card” in the first list. </p>
+							<p>Add cards for each task that needs to be completed by clicking 'Add Card' in the first list. </p>
 						</div>
 						<div className="col-sm-4">
 							<h3 className="ins_heading"><span className="ins_numbr">2</span> Drag Cards</h3>
@@ -33,7 +33,7 @@ class Modal extends Component {
 						</div>
 					</div>
 
-					<button className="global_button" onClick={this.props.onClose}>Got it!</button>
+					<button className="global_button centered" onClick={this.props.onClose}>Got it!</button>
 				</div>
 			</div>
 		);

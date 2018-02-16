@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Board from 'react-trello';
-// import logo from './logo.svg';
 import Modal from './components/Modal';
-
 import './App.css';
+
+
+const modalFlag = sessionStorage.getItem('modalOpen')==null ? true : false;
 
 const data = {
   lanes: [
@@ -12,7 +13,13 @@ const data = {
       title: 'Backlog',
       label: '2/2',
       cards: [
-        {id: 'Card1', title: 'Story #1', description: '‘Story #1 description', label: '30 mins'}
+        {
+          id: '001', 
+          title: 'Story #1', 
+          description: 'Story #1 description', 
+          label: '30 mins',
+          cardColor: ''
+        }
       ]
     },
     {
@@ -29,9 +36,6 @@ const data = {
     }
   ]
 }
-
-
-const modalFlag = sessionStorage.getItem('modalOpen')==null ? true : false;
 
 class App extends Component {
 
@@ -53,7 +57,9 @@ class App extends Component {
           data={data} 
           draggable
           editable
-         />
+          addCardLink={<button className="add_card_button">Add Card</button> } >
+         </Board>
+
          <Modal
           show={this.state.firstPageLoad}
           onClose={this.toggleModal}

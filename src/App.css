@@ -1,9 +1,20 @@
+/*Global color scheme
+
+main - #23719f
+texts - #3f3f3f
+
+*/
+
 body {
   color: #3f3f3f;
 }
 
-.App {
-  /*text-align: center;*/
+#root {
+  background: #23719f;
+}
+
+#root > div {
+  background: inherit;
 }
 
 .App-logo {
@@ -31,9 +42,26 @@ body {
   to { transform: rotate(360deg); }
 }
 
-.global_button {
+button {
   border-radius: 5px;
   color: white;
-  padding: 1rem;
-  background: #222;
+  padding: .5rem;
+  background: #23719f;
+  cursor: pointer;
+  border: none;
+}
+
+.global_button {
+  min-width: 200px;
+  font-size: 22px;
+}
+
+.add_card_button {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+
+.centered {
+  display: block;
+  margin: 0 auto;
 }
